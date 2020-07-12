@@ -1,30 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>form presensi ke -5</title>
+	<title>Final project Pweb</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta charset="utf-8">
 </head>
 <body>
+	<div class="tab">
 	<table align="center" border="1" cellpadding="25">
 		<td>
-			<form action="input"><center>form presensi minggu ke-5</center>
-			<pre>Nama			:<input type="text" name="Nama" size="30"></pre>
-			<pre>NIM			:<input type="number" name="NIM" size="30"></pre>
-			<pre>Asal			:<input type="text" name="Asal" size="30"></pre>
-			<pre>jenis kelamin		:<input type="radio" name="Pria">Pria <input type="radio" name="Wanita">Wanita</pre>
-			<pre>Agama			:<select>
-				<option>Islam</option>
-				<option>Kristen</option>
-				<option>Konghucu</option>
-				<option>Budha</option>
-				<option>Hindu</option>
-			</select>
-		</pre>
-			<pre>jelaskan secara singkat materi yang di sampaikan:
-			<br><textarea></textarea>
-			</form>
-			<button>simpan</button>
+			<form action="proses.php" method="post">
+				<center>Evaluasi hasil pembelajaran</center>
+				<pre>Nama			:<input type="text" name="nam" size="30"></pre>
+				<pre>NIM			:<input type="number" name="ni" size="30"></pre>
+				<pre>Asal			:<input type="text" name="sal" size="30"></pre>
+				<pre>jenis kelamin		:<input type="text" name="j">
+				<pre>Agama			:<select name="ag">
+					<option>Islam</option>
+					<option>Kristen</option>
+					<option>Konghucu</option>
+					<option>Budha</option>
+					<option>Hindu</option>
+					</select>
+				</pre>
+				<pre>jelaskan secara singkat materi yang di sampaikan:
+				<br><textarea name="ev" ></textarea>
+				<button type="submit" name="Submit">Simpan</button>
+			</form>	
 		</td>
 	</table>
-
+	</div>
 </body>
 </html>
