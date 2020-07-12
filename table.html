@@ -1,61 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>table tugas presensi ke-5</title>
+	<title>Rekap</title>
+	<style type="text/css">
+		body{
+			background-image: url(bg.jpg);
+		}
+		.dan table{
+			background-color: whitesmoke;
+		}
+		h1{
+			color: white;
+		}
+		.tombol{
+			border: none;
+			color: white;
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			cursor: pointer;
+		}
+
+		.tombol1{background-color:lightgrey;}
+	</style>
 </head>
 <body>
-	<h1><center>table</center></h1>
-	<table align="center" border="0" width="50%" height="50%" cellpadding="5" cellspacing="0">
-		<th colspan="4">Table</th>
-		<tr align="center">
-			<td>No</td>
-			<td>Nama</td>
-			<td>Tempat/tgl.lahir</td>
-			<td>Alamat</td>
-		</tr>
-		<tr align="center" bgcolor="lightgrey">
-			<td>1</td>
-			<td>Robby firdauzy alfenjy</td>
-			<td>Balikpapan,20 juni 2001</td>
-			<td>Balikpapan</td>
-		</tr>
-		<tr align="center">
-			<td>...........</td>
-			<td>...........</td>
-			<td>...........</td>
-			<td>...........</td>
-		</tr>
-		<tr align="center" bgcolor="lightgrey">
-			<td>...........</td>
-			<td>...........</td>
-			<td>...........</td>
-			<td>...........</td>
-		</tr>
-		<tr align="center">
-			<td>...........</td>
-			<td>...........</td>
-			<td>...........</td>
-			<td>...........</td>
-		</tr>
-		<tr align="center" bgcolor="lightgrey">
-			<td>...........</td>
-			<td>...........</td>
-			<td>...........</td>
-			<td>...........</td>
-		</tr>
-		<tr align="center">
-			<td>...........</td>
-			<td>...........</td>
-			<td>...........</td>
-			<td>...........</td>
-		</tr>
-		<tr align="center" bgcolor="lightgrey">
-			<td>...........</td>
-			<td>...........</td>
-			<td>...........</td>
-			<td>...........</td>
-		</tr>
-	</table>
-
+	<h1 align="center">Rekap evaluasi</h1>
+	<div class="dan">
+		<table width="100%" border="1">
+			<tr>
+				<th>Nama Lengkap</th>
+				<th>NIM</th>
+				<th>Asal</th>
+				<th>Jenis kelamin</th>
+				<th>Agama</th>
+				<th>Evaluasi</th>
+			</tr>
+			<?php 
+				echo "<head><title>evaluasi</head></title>";
+				$fp = fopen("data.txt", "r");
+			?>
+			<?php while ($isi = fgets($fp,100)) 
+			{
+				$pisah = explode ("|", $isi);
+				?>
+				<tr>
+					<th><?php echo"$pisah[0]"; ?></th>
+					<th><?php echo"$pisah[1]"; ?></th>
+					<th><?php echo"$pisah[2]"; ?></th>
+					<th><?php echo"$pisah[3]"; ?></th>
+					<th><?php echo"$pisah[4]"; ?></th>
+					<th><?php echo"$pisah[5]"; ?></th>
+				</tr>
+			<?php } ?>
+		</table>
+		<center><button class="tombol"><a align="center" href="form.html">kembali</a></center>
+	</div>
 </body>
 </html>
